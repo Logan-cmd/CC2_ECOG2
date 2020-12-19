@@ -1,0 +1,90 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{bash}
+sudo apt-get update -y 
+sudo apt-get install -y libbz2-dev
+sudo apt-get install -y liblzma-dev
+```
+
+
+```{bash}
+sudo apt-get install -y libglpk-dev
+
+```
+
+
+```{r}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("dada2", version = "3.12")
+```
+
+
+```{r}
+BiocManager::install("phangorn")
+BiocManager::install("DECIPHER")
+```
+
+
+```{r}
+install.packages("gridExtra")
+```
+
+
+```{r}
+BiocManager::install("phyloseq")
+```
+
+
+```{r package install}
+BiocManager::install("Bioconductor")
+```
+
+
+```{r}
+.cran_packages <- c( "shiny","miniUI", "caret", "pls", "e1071", "ggplot2", "randomForest", "dplyr", "ggrepel", "nlme", "devtools",
+                  "reshape2", "PMA", "structSSI", "ade4",
+                  "ggnetwork", "intergraph", "scales")
+.github_packages <- c("jfukuyama/phyloseqGraphTest")
+.bioc_packages <- c("genefilter", "impute")
+
+install.packages(.cran_packages)
+devtools::install_github(.github_packages)
+BiocManager::install(.bioc_packages)
+```
+
+
+```{r}
+BiocManager::install("DESeq2")
+```
+
+```{r}
+install.packages("structSSI")
+```
+
+
+```{r}
+library(devtools)
+install_local("./structSSI_1.1.1.tar.gz")
+```
+
+# Fin package install
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
